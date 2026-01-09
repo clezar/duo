@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Duo Finanças</title>
+    
+    <!-- Favicon & App Icon (Blue Gear with Dollar Sign) -->
+    <link rel="icon" type="image/svg+xml" href="https://rotalocal.com.br/duo/image/logo_icon.svg" />
+    <link rel="apple-touch-icon" href="https://rotalocal.com.br/duo/image/logo_icon.svg" />
+
+    <style>
+      /* Ensure inputs are at least 16px to prevent iOS zoom */
+      /* This media query ensures it only strictly applies to mobile devices where zoom is an issue */
+      @media screen and (max-width: 768px) {
+        input, select, textarea {
+          font-size: 16px !important;
+        }
+      }
+      
+      /* Prevent elastic scrolling on mobile */
+      body {
+        overscroll-behavior-y: none;
+      }
+    </style>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@supabase/supabase-js": "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
