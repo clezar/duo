@@ -681,6 +681,7 @@ const App: React.FC = () => {
                 transactions={transactions} 
                 currentMonth={selectedMonth} 
                 onManageAccount={() => setShowAccountSettings(true)}
+                onNavigateToTransactions={() => setCurrentTab(Tab.TRANSACTIONS)}
                 userStatus={currentUser.subscription_status}
                 user={currentUser}
               />

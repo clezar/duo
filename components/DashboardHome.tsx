@@ -7,11 +7,12 @@ interface Props {
   transactions: Transaction[];
   currentMonth: string;
   onManageAccount: () => void;
+  onNavigateToTransactions: () => void;
   userStatus?: 'active' | 'inactive' | 'trial' | 'free';
   user: User;
 }
 
-const DashboardHome: React.FC<Props> = ({ transactions, currentMonth, onManageAccount, userStatus, user }) => {
+const DashboardHome: React.FC<Props> = ({ transactions, currentMonth, onManageAccount, onNavigateToTransactions, userStatus, user }) => {
   // Estado para forçar atualização a cada segundo e manter o relógio preciso
   const [now, setNow] = useState(new Date());
 
@@ -152,7 +153,10 @@ const DashboardHome: React.FC<Props> = ({ transactions, currentMonth, onManageAc
       )}
 
       {/* CARD 1: REALIZADO (Verde) */}
-      <div className="bg-[#26a69a] rounded-3xl p-6 text-white shadow-lg shadow-[#26a69a]/30 relative overflow-hidden">
+      <div 
+        onClick={onNavigateToTransactions}
+        className="bg-[#26a69a] rounded-3xl p-6 text-white shadow-lg shadow-[#26a69a]/30 relative overflow-hidden cursor-pointer transition-all hover:scale-[1.02] active:scale-95"
+      >
         {/* Header do Card */}
         <div className="flex justify-between items-start mb-6">
           <div className="flex items-center gap-2 opacity-90">
@@ -212,7 +216,10 @@ const DashboardHome: React.FC<Props> = ({ transactions, currentMonth, onManageAc
       </div>
 
       {/* CARD 2: PROJEÇÃO (Neutro/Branco) */}
-      <div className="bg-white rounded-3xl p-5 border border-gray-200 shadow-sm">
+      <div 
+        onClick={onNavigateToTransactions}
+        className="bg-white rounded-3xl p-5 border border-gray-200 shadow-sm cursor-pointer transition-all hover:border-indigo-200 hover:shadow-md active:scale-95"
+      >
         <div className="flex items-center gap-2 mb-4 text-gray-500">
           <Calculator size={18} />
           <span className="text-xs font-bold uppercase tracking-wider">
