@@ -155,7 +155,7 @@ const DashboardHome: React.FC<Props> = ({ transactions, currentMonth, onManageAc
       {/* CARD 1: REALIZADO (Verde) */}
       <div 
         onClick={onNavigateToTransactions}
-        className="bg-[#26a69a] rounded-3xl p-6 text-white shadow-lg shadow-[#26a69a]/30 relative overflow-hidden cursor-pointer transition-all hover:scale-[1.02] active:scale-95"
+        className="bg-[#26a69a] rounded-3xl p-6 text-white shadow-lg shadow-[#26a69a]/30 relative overflow-hidden cursor-pointer transition-all active:scale-95"
       >
         {/* Header do Card */}
         <div className="flex justify-between items-start mb-6">
