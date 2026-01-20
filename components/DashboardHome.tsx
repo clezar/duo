@@ -218,7 +218,7 @@ const DashboardHome: React.FC<Props> = ({ transactions, currentMonth, onManageAc
       {/* CARD 2: PROJEÇÃO (Neutro/Branco) */}
       <div 
         onClick={onNavigateToTransactions}
-        className="bg-white rounded-3xl p-5 border border-gray-200 shadow-sm cursor-pointer transition-all hover:border-indigo-200 hover:shadow-md active:scale-95"
+        className="bg-white rounded-3xl p-5 border border-gray-200 shadow-sm cursor-pointer transition-all active:scale-95"
       >
         <div className="flex items-center gap-2 mb-4 text-gray-500">
           <Calculator size={18} />
